@@ -46,6 +46,9 @@ mv ./binaries/qt5.11.2_linux.zip ./bin/qt.zip
 # Move externalApps into bin to trick CMake
 mv ./binaries/externalApps.zip ./bin/
 
+# Move dependency manager into bin
+mv ./binaries/deps_linux.zip ./bin/
+
 # Remove all other blobs
 rm -rf binaries
 
@@ -56,7 +59,10 @@ rm -rf binaries
 cd bin
 
 # Extract externalApps
-unzip externalApps.zip &> /dev/null
+unzip externalApps.zip #&> /dev/null
+
+# Extract deps
+unzip deps_linux.zip #&> /dev/null
 
 # Create test data dir to skip ftp download
 mkdir testing
