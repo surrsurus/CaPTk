@@ -59,10 +59,10 @@ rm -rf binaries
 cd bin
 
 # Extract externalApps
-unzip externalApps.zip #&> /dev/null
+unzip externalApps.zip &> /dev/null
 
 # Extract deps
-unzip deps_linux.zip #&> /dev/null
+unzip deps_linux.zip &> /dev/null
 
 # Create test data dir to skip ftp download
 mkdir testing
